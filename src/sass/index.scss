@@ -1,0 +1,28 @@
+@import url('./app.scss');
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+}
+
+
+::-webkit-scrollbar {
+    background-color: $black;
+    width: 3px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+
+
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+body {
+    background-color: $black;
+}
