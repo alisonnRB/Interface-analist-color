@@ -51,21 +51,32 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: height ease 1s;
 }
 .input-content-part .lines {
   height: 35%;
   width: 30%;
+  overflow: hidden;
 }
 .input-content-part .lines img {
   height: 100%;
   width: 100%;
   object-fit: contain;
+  z-index: -3;
+}
+.input-content-part .lines .image-dell {
+  background: #f1f1f1;
+  position: relative;
+  height: 105%;
+  bottom: 0;
+  transition: bottom ease 1s;
 }
 .input-content-part .box {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 .input-content-part .box h1 {
   font-family: "jura";
@@ -74,7 +85,7 @@ body {
 }
 .input-content-part .box .input-box {
   width: 100vw;
-  height: 200px;
+  height: 110px;
 }
 
 input[type=file] {

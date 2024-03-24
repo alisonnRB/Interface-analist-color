@@ -25,18 +25,17 @@
     export default {
         name: 'CustomInput',
         data() {
-        return {
-            inputValue: null,
-            drawble: {
-                camera: camera
-            }
-        };
+          return {
+              drawble: {
+                  camera: camera
+              }
+          };
         },
         methods: {
             handleImageChange(e) {
-                this.inputValue = e.target.files[0];
+              this.$emit('hasFile',  e.target.files[0]);
             }
-        }
+        },
     };
 </script>
   
