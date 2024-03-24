@@ -1,3 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap");
+body {
+  height: 100vh;
+  width: 100vh;
+}
+
+.input-content-part .box .input-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glass {
+  border-top: solid #fff 1px;
+  border-right: solid #fff 1px;
+  background: transparent !important;
+  box-shadow: inset 10px -10px 10px 0px rgba(255, 255, 255, 0.7490196078), inset -10px 10px 10px 0px rgba(0, 0, 0, 0.2), -10px 10px 20px 0px rgba(0, 0, 0, 0.5019607843);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -18,12 +37,77 @@ a:visited {
 }
 
 body {
-  height: 100vh;
-  width: 100vh;
+  background: #f1f1f1;
 }
 
-body {
+.input-content-part {
   background: #f1f1f1;
+  height: 100vh;
+  width: 100vw;
+}
+.input-content-part .input-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input-content-part .lines {
+  height: 35%;
+  width: 30%;
+}
+.input-content-part .lines img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.input-content-part .box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input-content-part .box h1 {
+  font-family: "jura";
+  color: #797979;
+  font-size: 4em;
+}
+.input-content-part .box .input-box {
+  width: 100vw;
+  height: 200px;
+}
+
+input[type=file] {
+  display: none;
+}
+
+.custom-input, .glass {
+  cursor: pointer;
+  height: 70px;
+  width: 55vw;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 5px 0px 5px 0px;
+  border-radius: 5px;
+  z-index: 100;
+}
+.custom-input img, .glass img {
+  height: 75%;
+  margin-left: 30px;
+  opacity: 0.5;
+  filter: blur(0.8px);
+}
+.custom-input p, .glass p {
+  color: #797979;
+  opacity: 0.75;
+  font-size: 1.3em;
+  filter: blur(0.8px);
+}
+
+.glass {
+  position: relative;
+  margin-top: -80px;
 }
 
 /*# sourceMappingURL=index.css.map */

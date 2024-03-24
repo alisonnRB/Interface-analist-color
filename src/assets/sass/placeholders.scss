@@ -8,3 +8,12 @@
     align-items: center;
     justify-content: center;
 }
+
+%glass {
+    border-top: solid #fff 1px;
+    border-right: solid #fff 1px;
+    background: transparent !important;
+    box-shadow: inset 10px -10px 10px 0px #ffffffbf,
+        inset -10px 10px 10px 0px #00000033,
+        -10px 10px 20px 0px #00000080;
+}

@@ -1,6 +1,43 @@
-@import './placeholders.scss';
-
-body {
-    @extend %fullScreen;
+.input-content-part {
     background: $background;
+    height: 100vh;
+    width: 100vw;
+
+    .input-content {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lines {
+        height: 35%;
+        width: 30%;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            font-family: 'jura';
+            color: $lines;
+            font-size: 4em;
+        }
+
+        .input-box {
+            width: 100vw;
+            height: 200px;
+            @extend %central;
+        }
+    }
 }

@@ -1,4 +1,7 @@
 @import './app.scss';
+@import './placeholders.scss';
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+
 
 * {
     padding: 0;
@@ -22,5 +25,11 @@ a:visited {
     text-decoration: none;
 }
 
+body {
+    @extend %fullScreen;
+    background: $background;
+}
+
 
 @import './home.scss';
+@import './input_custom.scss';
