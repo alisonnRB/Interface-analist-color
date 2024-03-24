@@ -1,0 +1,6 @@
+@import './placeholders.scss';
+
+body {
+    @extend %fullScreen;
+    background: $background;
+}

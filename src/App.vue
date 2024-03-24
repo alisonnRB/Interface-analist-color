@@ -1,10 +1,17 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-</script>
 
 <template>
-
+    <HomeView />
 </template>
 
-<style lang="scss">
-</style>
+
+<script>
+import { RouterLink, RouterView } from 'vue-router'
+import HomeView from './components/HomeView.vue'
+
+export default {
+        name: 'App',
+        components: {
+            HomeView,
+        }
+    }
+</script>
