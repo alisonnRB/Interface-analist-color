@@ -38,6 +38,7 @@ a:visited {
 
 body {
   background: #f1f1f1;
+  overflow-x: hidden;
 }
 
 .input-content-part {
@@ -57,17 +58,17 @@ body {
   height: 35%;
   width: 30%;
   overflow: hidden;
+  transition: height ease 1s;
 }
 .input-content-part .lines img {
   height: 100%;
   width: 100%;
   object-fit: contain;
-  z-index: -3;
 }
 .input-content-part .lines .image-dell {
   background: #f1f1f1;
   position: relative;
-  height: 105%;
+  height: 100%;
   bottom: 0;
   transition: bottom ease 1s;
 }
@@ -86,6 +87,14 @@ body {
 .input-content-part .box .input-box {
   width: 100vw;
   height: 110px;
+}
+
+.information-content-part {
+  height: 0vh;
+  width: 0vw;
+  background: #797979;
+  box-shadow: inset 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+  transition: width ease 1s;
 }
 
 input[type=file] {

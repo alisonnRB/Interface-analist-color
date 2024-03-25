@@ -1,8 +1,8 @@
 <template>
-    <section class="input-content-part">
-        <inputView />
+    <section :style="mode ? {'height' : '35vh'} : null" class="input-content-part">
+        <inputView @hasFile="handleSelect"/>
     </section>
-    <section class="information-content-part">
+    <section :style="mode ? {'height':'65vh', 'width': '100vw'} : null" class="information-content-part">
 
     </section>
 </template>
@@ -12,6 +12,24 @@
 
     export default {
         name: 'HomeView',
+        data(){
+            return {
+                file: null,
+                mode: false
+            }
+        },
+        methods:{
+            handleSelect(file){
+                this.file = file;
+            }
+        },
+        watch: {
+            file(New, Old){
+                if(New){
+                    this.mode = true;
+                }
+            }
+        },
         components: {
             inputView,
         }

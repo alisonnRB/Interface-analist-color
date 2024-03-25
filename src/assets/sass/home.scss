@@ -2,6 +2,7 @@
     background: $background;
     height: 100vh;
     width: 100vw;
+    
 
     .input-content {
         height: 100%;
@@ -9,7 +10,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
         transition: height ease 1s;
     }
 
@@ -18,17 +18,18 @@
         width: 30%;
         overflow: hidden;
 
+        transition: height ease 1s;
+
         img {
             height: 100%;
             width: 100%;
             object-fit: contain;
-            z-index: -3;
         }
 
         .image-dell {
             background: $background;
             position: relative;
-            height: 105%;
+            height: 100%;
             bottom: 0;
 
             transition: bottom ease 1s;
@@ -54,4 +55,13 @@
             @extend %central;
         }
     }
+}
+
+.information-content-part{
+    height: 0vh;
+    width: 0vw;
+    background: $lines;
+    box-shadow: inset 0px 10px 10px 0px #00000033;
+
+    transition: width ease 1s;
 }

@@ -1,8 +1,8 @@
 <template>
     <div class="input-content" :style="mode ? {'height':'35%'} : null">
-        <div class="lines">
+        <div class="lines" :style="mode ? {'height':'0%'} : null">
             <img :src="drawble.line">
-            <div class="image-dell" :style="file ? {'bottom' : '105%'}: null"></div>
+            <div class="image-dell" :style="file ? {'bottom' : '100%'}: null"></div>
         </div>
         <div class="box">
             <h1>ANALIST</h1>
@@ -58,6 +58,9 @@
                 }catch(e){
                     console.log(e);
                 }
+            },
+            handleImageChange(file) {
+              this.$emit('hasFile',  file);
             }
         },
         watch: {
@@ -66,6 +69,10 @@
                    setTimeout(()=>{
                     this.mode = true;
                    }, 1000);
+
+                   setTimeout(()=>{
+                    this.handleImageChange(this.file)
+                   }, 2000);
                 }
             }
         }
