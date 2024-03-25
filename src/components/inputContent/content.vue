@@ -14,6 +14,7 @@
 <script>
     import line from '../icons/lines.png';
     import CustomInput from './child/customInput.vue';
+    import axios from 'axios';
 
     export default {
         name: 'inputView',
@@ -24,6 +25,7 @@
             return {
                 file: null,
                 mode: false,
+                colors: null,
                 drawble: {
                     line: line,
                 }
@@ -32,16 +34,38 @@
         methods: {
             handleSelect(file){
                 this.file = file;
+                if(this.file){
+                    this.Search();
+                }
+            },
+            async Search(){
+                try{
+                    const formData = new FormData;
+                    formData.append('image', this.file);
+
+                    const resposta = await axios.post('https://coloranalist.online/src/', formData, {
+                        headers: {
+                            'Content-Type': 'multipart/form-data'
+                        }
+                    });
+
+                    if(resposta.data.ok){
+                        this.colors = resposta.data.response;
+                    }else{
+                        console.log('erro: ' + resposta.data);
+                    }
+
+                }catch(e){
+                    console.log(e);
+                }
             }
         },
         watch: {
             file(New, Old){
                 if(New){
-
                    setTimeout(()=>{
                     this.mode = true;
                    }, 1000);
-
                 }
             }
         }

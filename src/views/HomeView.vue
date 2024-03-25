@@ -2,6 +2,9 @@
     <section class="input-content-part">
         <inputView />
     </section>
+    <section class="information-content-part">
+
+    </section>
 </template>
 
 <script>
