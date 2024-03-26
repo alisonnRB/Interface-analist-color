@@ -96,6 +96,11 @@ body {
   box-shadow: inset 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
   transition: width ease 1s;
 }
+.information-content-part .input-content {
+  height: 100%;
+  width: 100%;
+  background-color: pink;
+}
 
 input[type=file] {
   display: none;
@@ -128,6 +133,14 @@ input[type=file] {
 .glass {
   position: relative;
   margin-top: -80px;
+}
+
+.circleContent {
+  background-color: blue;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: solid 5px #fff;
 }
 
 /*# sourceMappingURL=index.css.map */

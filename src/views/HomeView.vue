@@ -3,12 +3,13 @@
         <inputView @hasFile="handleSelect"/>
     </section>
     <section :style="mode ? {'height':'65vh', 'width': '100vw'} : null" class="information-content-part">
-
+        <contentInfo />
     </section>
 </template>
 
 <script>
     import inputView from '../components/inputContent/content.vue';
+    import contentInfo from '../components/informationContent/content.vue';
 
     export default {
         name: 'HomeView',
@@ -32,6 +33,7 @@
         },
         components: {
             inputView,
+            contentInfo,
         }
     }
 </script>

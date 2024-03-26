@@ -64,4 +64,10 @@
     box-shadow: inset 0px 10px 10px 0px #00000033;
 
     transition: width ease 1s;
+
+    .input-content {
+        height: 100%;
+        width: 100%;
+        background-color: pink;
+    }
 }
