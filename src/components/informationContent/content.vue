@@ -13,15 +13,17 @@
 
             <template v-else>
                 <span>
+                    Nenhuma cor disponível.
                 </span>
             </template>
-
         </div>
     </div>
 </template>
 
 <script>
 import circleColor from './child/circleColor.vue';
+import { EventBus } from "../../eventBus";
+import color from '@/assets/js/global';
 
 export default {
     name: "contentInfo",
@@ -33,30 +35,14 @@ export default {
     components: {
         circleColor,
     },
-    props: {
-        file: {
-            type: File,
-            default: null
-        },
-        colors: {
-            type: Object,
-            default: null
-        }
-    },
-    watch: {
-        file(New, Old) {
-            console.log(New)
-        },
-        colors(New, Old) {
-            this.palette = [];
-            if (New && New['palette-HEX']) {
-
-                this.palette = New['palette-HEX'];
-            } else {
-                this.palette = []
+    mounted() {
+        EventBus.on("modifica-mudou", (novaModifica) => {
+            if (novaModifica) {
+                this.palette = color.getPalette();
+                color.setModifica(false);
             }
-        }
-    }
+        });
+    },
 }
 
 </script>

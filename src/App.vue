@@ -1,4 +1,3 @@
-
 <template>
     <HomeView />
 </template>
@@ -8,9 +7,9 @@
 import HomeView from './views/HomeView.vue'
 
 export default {
-        name: 'App',
-        components: {
-            HomeView,
-        }
+    name: 'App',
+    components: {
+        HomeView,
     }
+}
 </script>
