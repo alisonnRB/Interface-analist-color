@@ -14,7 +14,7 @@ body {
   border-top: solid #fff 1px;
   border-right: solid #fff 1px;
   background: transparent !important;
-  box-shadow: inset 10px -10px 10px 0px rgba(255, 255, 255, 0.7490196078), inset -10px 10px 10px 0px rgba(0, 0, 0, 0.2), -10px 10px 20px 0px rgba(0, 0, 0, 0.5019607843);
+  box-shadow: inset 10px -10px 10px 0px rgba(255, 255, 255, 0.7490196078), inset -5px 5px 10px 0px rgba(121, 121, 121, 0.5019607843), 10px -10px 10px 5px #f1f1f1, -10px 10px 20px 0px rgba(121, 121, 121, 0.5019607843);
 }
 
 * {
@@ -83,6 +83,7 @@ body {
   font-family: "jura";
   color: #797979;
   font-size: 4em;
+  text-shadow: -3px 3px 0.05em rgba(121, 121, 121, 0.2823529412);
 }
 .input-content-part .box .input-box {
   width: 100vw;
