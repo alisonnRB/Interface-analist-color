@@ -74,6 +74,11 @@
                     this.handleImageChange(this.file)
                    }, 2000);
                 }
+            },
+            colors(New, Old){
+                if(New){
+                    this.$emit('hasInfos',  this.colors);
+                }
             }
         }
     }

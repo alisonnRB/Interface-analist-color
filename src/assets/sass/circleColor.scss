@@ -1,7 +1,19 @@
-.circleContent{
-    background-color: blue;
-    height: 100px;
-    width: 100px;
+.circleContent {
+    @extend %central;
+    flex-direction: column;
+    gap: 20px;
+
+    .colorText {
+        font-family: 'inter';
+    }
+}
+
+.circleColor {
+    height: 70px;
+    width: 70px;
     border-radius: 50%;
     border: solid 5px #fff;
+    background-color: #E9CA6D;
+    box-shadow: inset -5px 5px 10px 0 #00000033,
+        -5px 5px 10px 0 #00000080;
 }

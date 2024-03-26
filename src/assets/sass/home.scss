@@ -69,6 +69,23 @@
     .input-content {
         height: 100%;
         width: 100%;
-        background-color: pink;
+        padding-top: 50px;
+
+        .palette {
+            @extend %central;
+            flex-direction: column;
+            gap: 40px;
+
+            h2 {
+                color: white;
+                font-family: 'inter';
+                font-size: 2em;
+            }
+
+            .content-color {
+                @extend %central;
+                gap: 50px;
+            }
+        }
     }
 }
