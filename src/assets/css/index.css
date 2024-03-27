@@ -40,6 +40,8 @@ a:visited {
 body {
   background: #f1f1f1;
   overflow-x: hidden;
+  height: 100vh;
+  width: 100vw;
 }
 
 .input-content-part {
@@ -56,11 +58,46 @@ body {
   transition: height ease 1s;
   gap: 30px;
 }
+@media ((min-width: 768px) and (max-width: 991px) and (orientation: landscape)) {
+  .input-content-part .input-content {
+    justify-content: center;
+  }
+}
+@media ((min-width: 576px) and (max-width: 767px) and (orientation: landscape)) {
+  .input-content-part .input-content {
+    justify-content: center;
+  }
+}
+@media ((min-width: 0) and (max-width: 575px) and (orientation: landscape)) {
+  .input-content-part .input-content {
+    justify-content: center;
+  }
+}
 .input-content-part .lines {
   height: 35%;
   width: 30%;
   overflow: hidden;
   transition: height ease 1s;
+}
+@media (orientation: portrait) {
+  .input-content-part .lines {
+    width: 100%;
+  }
+}
+@media ((min-width: 768px) and (max-width: 991px) and (orientation: landscape)) {
+  .input-content-part .lines {
+    display: none;
+  }
+}
+@media ((min-width: 576px) and (max-width: 767px) and (orientation: landscape)) {
+  .input-content-part .lines {
+    display: none;
+  }
+}
+@media ((min-width: 0) and (max-width: 575px) and (orientation: landscape)) {
+  .input-content-part .lines {
+    display: none;
+  }
 }
 .input-content-part .lines img {
   height: 100%;
@@ -86,6 +123,11 @@ body {
   color: #797979;
   font-size: 4em;
   text-shadow: -3px 3px 0.05em rgba(121, 121, 121, 0.2823529412);
+}
+@media ((min-width: 0) and (max-width: 575px) and (orientation: portrait)) {
+  .input-content-part .box h1 {
+    font-size: 2em;
+  }
 }
 .input-content-part .box .input-box {
   width: 100vw;
@@ -117,12 +159,43 @@ body {
   font-size: 2em;
 }
 .information-content-part .input-content .palette .content-color {
+  flex-wrap: wrap;
   gap: 50px;
 }
 .information-content-part .input-content .content-infos {
   margin-top: 80px;
   display: flex;
   justify-content: space-between;
+}
+@media ((min-width: 576px) and (max-width: 767px) and (orientation: portrait)) {
+  .information-content-part .input-content .content-infos {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+@media ((min-width: 0) and (max-width: 575px) and (orientation: portrait)) {
+  .information-content-part .input-content .content-infos {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+@media ((min-width: 768px) and (max-width: 991px) and (orientation: landscape)) {
+  .information-content-part .input-content .content-infos {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+@media ((min-width: 576px) and (max-width: 767px) and (orientation: landscape)) {
+  .information-content-part .input-content .content-infos {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+@media ((min-width: 0) and (max-width: 575px) and (orientation: landscape)) {
+  .information-content-part .input-content .content-infos {
+    flex-direction: column;
+    gap: 30px;
+  }
 }
 .information-content-part .input-content .content-infos .especifc-colors {
   flex-direction: column;
@@ -132,6 +205,21 @@ body {
   border-left: solid 5px #fff;
   margin-left: 80px;
   box-shadow: -15px 0px 10px -10px rgba(0, 0, 0, 0.2);
+}
+@media ((min-width: 768px) and (max-width: 991px) and (orientation: portrait)) {
+  .information-content-part .input-content .content-infos .especifc-colors {
+    margin-left: 5px;
+  }
+}
+@media ((min-width: 576px) and (max-width: 767px) and (orientation: portrait)) {
+  .information-content-part .input-content .content-infos .especifc-colors {
+    margin-left: 5px;
+  }
+}
+@media ((min-width: 0) and (max-width: 575px) and (orientation: portrait)) {
+  .information-content-part .input-content .content-infos .especifc-colors {
+    margin-left: 5px;
+  }
 }
 .information-content-part .input-content .content-infos .especifc-colors .box-especif .circleContent {
   position: relative;
@@ -150,8 +238,68 @@ body {
   font-family: "inter";
   font-size: 1.5em;
 }
+@media ((min-width: 576px) and (max-width: 767px) and (orientation: portrait)) {
+  .information-content-part .input-content .content-infos .especifc-colors .box-especif .desc {
+    font-size: 1em;
+  }
+}
+@media ((min-width: 0) and (max-width: 575px) and (orientation: portrait)) {
+  .information-content-part .input-content .content-infos .especifc-colors .box-especif .desc {
+    font-size: 1em;
+    white-space: wrap;
+  }
+}
 .information-content-part .input-content .content-infos .image {
   margin-right: 30px;
+  position: relative;
+}
+@media ((min-width: 576px) and (max-width: 767px) and (orientation: portrait)) {
+  .information-content-part .input-content .content-infos .image {
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+@media ((min-width: 0) and (max-width: 575px) and (orientation: portrait)) {
+  .information-content-part .input-content .content-infos .image {
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+@media ((min-width: 768px) and (max-width: 991px) and (orientation: landscape)) {
+  .information-content-part .input-content .content-infos .image {
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+@media ((min-width: 576px) and (max-width: 767px) and (orientation: landscape)) {
+  .information-content-part .input-content .content-infos .image {
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+@media ((min-width: 0) and (max-width: 575px) and (orientation: landscape)) {
+  .information-content-part .input-content .content-infos .image {
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
 }
 .information-content-part .input-content .content-infos .image img {
   display: block;
@@ -159,6 +307,36 @@ body {
   height: 250px;
   border: solid 6px #fff;
   box-shadow: -15px 15px 20px 0 rgba(0, 0, 0, 0.2);
+}
+@media ((min-width: 768px) and (max-width: 991px) and (orientation: portrait)) {
+  .information-content-part .input-content .content-infos .image img {
+    height: 150px;
+  }
+}
+@media ((min-width: 576px) and (max-width: 767px) and (orientation: portrait)) {
+  .information-content-part .input-content .content-infos .image img {
+    height: 150px;
+  }
+}
+@media ((min-width: 0) and (max-width: 575px) and (orientation: portrait)) {
+  .information-content-part .input-content .content-infos .image img {
+    height: 150px;
+  }
+}
+@media ((min-width: 768px) and (max-width: 991px) and (orientation: landscape)) {
+  .information-content-part .input-content .content-infos .image img {
+    height: 150px;
+  }
+}
+@media ((min-width: 576px) and (max-width: 767px) and (orientation: landscape)) {
+  .information-content-part .input-content .content-infos .image img {
+    height: 150px;
+  }
+}
+@media ((min-width: 0) and (max-width: 575px) and (orientation: landscape)) {
+  .information-content-part .input-content .content-infos .image img {
+    height: 150px;
+  }
 }
 .information-content-part .input-content .content-infos .image .shadow {
   height: 250px;
@@ -169,6 +347,38 @@ body {
   left: 6px;
   box-shadow: inset -10px 10px 20px 0 rgba(0, 0, 0, 0.7176470588), inset 5px -5px 20px rgba(255, 255, 255, 0.5019607843);
 }
+@media ((min-width: 768px) and (max-width: 991px) and (orientation: portrait)) {
+  .information-content-part .input-content .content-infos .image .shadow {
+    height: 150px;
+    bottom: 156px;
+    margin-bottom: -150px;
+  }
+}
+@media ((min-width: 576px) and (max-width: 767px) and (orientation: portrait)) {
+  .information-content-part .input-content .content-infos .image .shadow {
+    display: none;
+  }
+}
+@media ((min-width: 0) and (max-width: 575px) and (orientation: portrait)) {
+  .information-content-part .input-content .content-infos .image .shadow {
+    display: none;
+  }
+}
+@media ((min-width: 576px) and (max-width: 767px) and (orientation: landscape)) {
+  .information-content-part .input-content .content-infos .image .shadow {
+    display: none;
+  }
+}
+@media ((min-width: 0) and (max-width: 575px) and (orientation: landscape)) {
+  .information-content-part .input-content .content-infos .image .shadow {
+    display: none;
+  }
+}
+@media ((min-width: 768px) and (max-width: 991px) and (orientation: landscape)) {
+  .information-content-part .input-content .content-infos .image .shadow {
+    display: none;
+  }
+}
 .information-content-part .input-content .content-infos .image .suport {
   height: 250px;
   position: relative;
@@ -178,6 +388,36 @@ body {
   background: transparent;
   left: 50%;
   box-shadow: -15px 15px 20px 0 rgba(0, 0, 0, 0.2);
+}
+@media ((min-width: 768px) and (max-width: 991px) and (orientation: portrait)) {
+  .information-content-part .input-content .content-infos .image .suport {
+    height: 150px;
+  }
+}
+@media ((min-width: 576px) and (max-width: 767px) and (orientation: portrait)) {
+  .information-content-part .input-content .content-infos .image .suport {
+    display: none;
+  }
+}
+@media ((min-width: 0) and (max-width: 575px) and (orientation: portrait)) {
+  .information-content-part .input-content .content-infos .image .suport {
+    display: none;
+  }
+}
+@media ((min-width: 576px) and (max-width: 767px) and (orientation: landscape)) {
+  .information-content-part .input-content .content-infos .image .suport {
+    display: none;
+  }
+}
+@media ((min-width: 0) and (max-width: 575px) and (orientation: landscape)) {
+  .information-content-part .input-content .content-infos .image .suport {
+    display: none;
+  }
+}
+@media ((min-width: 768px) and (max-width: 991px) and (orientation: landscape)) {
+  .information-content-part .input-content .content-infos .image .suport {
+    display: none;
+  }
 }
 
 @keyframes aparece {
@@ -203,6 +443,48 @@ input[type=file] {
   border-radius: 8px;
   z-index: 100;
   margin-top: 80px;
+}
+@media ((min-width: 768px) and (max-width: 991px) and (orientation: portrait)) {
+  .custom-input, .glass {
+    width: 85vw;
+    margin-top: 30px;
+  }
+}
+@media ((min-width: 576px) and (max-width: 767px) and (orientation: portrait)) {
+  .custom-input, .glass {
+    width: 90vw;
+    margin-top: 30px;
+  }
+}
+@media ((min-width: 0) and (max-width: 575px) and (orientation: portrait)) {
+  .custom-input, .glass {
+    width: 95vw;
+    margin-top: 30px;
+  }
+}
+@media ((min-width: 768px) and (max-width: 991px) and (orientation: landscape)) {
+  .custom-input, .glass {
+    width: 85vw;
+    margin-top: 30px;
+  }
+}
+@media ((min-width: 576px) and (max-width: 767px) and (orientation: landscape)) {
+  .custom-input, .glass {
+    width: 85vw;
+    margin-top: 30px;
+  }
+}
+@media ((min-width: 0) and (max-width: 575px) and (orientation: landscape)) {
+  .custom-input, .glass {
+    width: 85vw;
+    margin-top: 30px;
+  }
+}
+@media ((min-width: 992px) and (max-width: 1199px) and (orientation: landscape)) {
+  .custom-input, .glass {
+    width: 85vw;
+    margin-top: 0;
+  }
 }
 .custom-input img, .glass img {
   height: 75%;

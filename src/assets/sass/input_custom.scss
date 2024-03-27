@@ -14,6 +14,41 @@ input[type='file'] {
     z-index: 100;
     margin-top: 80px;
 
+    @include md(portrait) {
+        width: 85vw;
+        margin-top: 30px;
+    }
+
+    @include sm(portrait) {
+        width: 90vw;
+        margin-top: 30px;
+    }
+
+    @include xs(portrait) {
+        width: 95vw;
+        margin-top: 30px;
+    }
+
+    @include md(landscape) {
+        width: 85vw;
+        margin-top: 30px;
+    }
+
+    @include sm(landscape) {
+        width: 85vw;
+        margin-top: 30px;
+    }
+
+    @include xs(landscape) {
+        width: 85vw;
+        margin-top: 30px;
+    }
+
+    @include lg(landscape) {
+        width: 85vw;
+        margin-top: 0;
+    }
+
     img {
         height: 75%;
         margin-left: 30px;

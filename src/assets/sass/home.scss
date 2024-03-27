@@ -11,12 +11,41 @@
         align-items: center;
         transition: height ease 1s;
         gap: 30px;
+
+        @include md(landscape) {
+            justify-content: center;
+        }
+
+        @include sm(landscape) {
+            justify-content: center;
+        }
+
+        @include xs(landscape) {
+            justify-content: center;
+        }
+
     }
 
     .lines {
         height: 35%;
         width: 30%;
         overflow: hidden;
+
+        @include por {
+            width: 100%;
+        }
+
+        @include md(landscape) {
+            display: none;
+        }
+
+        @include sm(landscape) {
+            display: none;
+        }
+
+        @include xs(landscape) {
+            display: none;
+        }
 
         transition: height ease 1s;
 
@@ -47,7 +76,12 @@
             font-family: 'jura';
             color: $lines;
             font-size: 4em;
-            text-shadow: -3px 3px 0.05em #79797948
+            text-shadow: -3px 3px 0.05em #79797948;
+
+            @include xs(portrait) {
+                font-size: 2em;
+            }
+
         }
 
         .input-box {
@@ -88,6 +122,7 @@
 
             .content-color {
                 @extend %central;
+                flex-wrap: wrap;
                 gap: 50px;
             }
         }
@@ -96,6 +131,32 @@
             margin-top: 80px;
             display: flex;
             justify-content: space-between;
+
+            @include sm(portrait) {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            @include xs(portrait) {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            @include md(landscape) {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            @include sm(landscape) {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            @include xs(landscape) {
+                flex-direction: column;
+                gap: 30px;
+            }
+
 
             .especifc-colors {
                 @extend %central;
@@ -106,6 +167,18 @@
                 border-left: solid 5px #fff;
                 margin-left: 80px;
                 box-shadow: -15px 0px 10px -10px #00000033;
+
+                @include md(portrait) {
+                    margin-left: 5px;
+                }
+
+                @include sm(portrait) {
+                    margin-left: 5px;
+                }
+
+                @include xs(portrait) {
+                    margin-left: 5px;
+                }
 
                 .box-especif {
                     @extend %central;
@@ -128,6 +201,15 @@
                         color: $background;
                         font-family: 'inter';
                         font-size: 1.5em;
+
+                        @include sm(portrait) {
+                            font-size: 1em;
+                        }
+
+                        @include xs(portrait) {
+                            font-size: 1em;
+                            white-space: wrap;
+                        }
                     }
                 }
             }
@@ -136,6 +218,51 @@
 
             .image {
                 margin-right: 30px;
+                position: relative;
+
+
+                @include sm(portrait) {
+                    margin-right: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    margin-top: 20px;
+                }
+
+                @include xs(portrait) {
+                    margin-right: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 20px;
+                }
+
+                @include md(landscape) {
+                    margin-right: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    margin-top: 20px;
+                }
+
+                @include sm(landscape) {
+                    margin-right: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    margin-top: 20px;
+                }
+
+                @include xs(landscape) {
+                    margin-right: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 20px;
+                }
 
                 img {
                     display: block;
@@ -143,6 +270,30 @@
                     height: 250px;
                     border: solid 6px #fff;
                     box-shadow: -15px 15px 20px 0 #00000033;
+
+                    @include md(portrait) {
+                        height: 150px;
+                    }
+
+                    @include sm(portrait) {
+                        height: 150px;
+                    }
+
+                    @include xs(portrait) {
+                        height: 150px;
+                    }
+
+                    @include md(landscape) {
+                        height: 150px;
+                    }
+
+                    @include sm(landscape) {
+                        height: 150px;
+                    }
+
+                    @include xs(landscape) {
+                        height: 150px;
+                    }
                 }
 
                 .shadow {
@@ -154,6 +305,32 @@
                     left: 6px;
                     box-shadow: inset -10px 10px 20px 0 #000000b7,
                         inset 5px -5px 20px #ffffff80;
+
+                    @include md(portrait) {
+                        height: 150px;
+                        bottom: 156px;
+                        margin-bottom: -150px;
+                    }
+
+                    @include sm(portrait) {
+                        display: none;
+                    }
+
+                    @include xs(portrait) {
+                        display: none;
+                    }
+
+                    @include sm(landscape) {
+                        display: none;
+                    }
+
+                    @include xs(landscape) {
+                        display: none;
+                    }
+
+                    @include md(landscape) {
+                        display: none;
+                    }
                 }
 
                 .suport {
@@ -165,6 +342,30 @@
                     background: transparent;
                     left: 50%;
                     box-shadow: -15px 15px 20px 0 #00000033;
+
+                    @include md(portrait) {
+                        height: 150px;
+                    }
+
+                    @include sm(portrait) {
+                        display: none;
+                    }
+
+                    @include xs(portrait) {
+                        display: none;
+                    }
+
+                    @include sm(landscape) {
+                        display: none;
+                    }
+
+                    @include xs(landscape) {
+                        display: none;
+                    }
+
+                    @include md(landscape) {
+                        display: none;
+                    }
                 }
 
             }
