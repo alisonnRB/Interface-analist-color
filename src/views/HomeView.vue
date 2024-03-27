@@ -1,4 +1,5 @@
 <template>
+    <api />
     <section :style="mode ? { 'height': '35vh' } : null" class="input-content-part">
         <inputView @modeON="modeTurn" />
     </section>
@@ -11,6 +12,7 @@
 <script>
 import inputView from '../components/inputContent/content.vue';
 import contentInfo from '../components/informationContent/content.vue';
+import api from '@/components/api/api.vue';
 
 export default {
     name: 'HomeView',
@@ -29,6 +31,7 @@ export default {
     components: {
         inputView,
         contentInfo,
+        api
     }
 }
 </script>

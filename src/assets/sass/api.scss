@@ -1,0 +1,81 @@
+.guia-api {
+    position: absolute;
+    font-family: 'k2d';
+    color: #7979793a;
+    cursor: pointer;
+    font-size: 2em;
+    right: 5px;
+}
+
+
+.content-bar {
+    height: 100vh;
+    width: 100vw;
+    @extend %central;
+    background: $background;
+
+    .aviso {
+        color: #808080a1;
+        font-family: 'jura';
+        position: absolute;
+        bottom: 20px;
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    .comeback {
+        transform: rotate(90deg);
+        position: absolute;
+        top: 10px;
+        height: 80px;
+        cursor: pointer;
+        opacity: 0.3;
+    }
+
+    .bar {
+        background: $fundo;
+        width: 60vw;
+        height: 60px;
+        display: flex;
+        box-shadow: -10px 10px 10px 0 #0000008e;
+
+        @include por {
+            width: 95vw;
+        }
+
+        .method {
+            height: 100%;
+            width: 15%;
+            background: #808080;
+
+            @extend %central;
+
+            h3 {
+                color: $background;
+                font-family: 'k2d';
+                font-size: 1.3em;
+
+                @include por {
+                    font-size: 1em;
+                }
+            }
+        }
+
+        .request {
+            height: 100%;
+            width: 85%;
+            font-family: 'k2d';
+            color: #fff;
+            font-size: 1.3em;
+            @extend %central;
+            justify-content: center;
+            text-align: center;
+
+            @include por {
+                font-size: 1em;
+            }
+
+
+        }
+    }
+}
