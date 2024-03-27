@@ -3,7 +3,6 @@
     height: 100vh;
     width: 100vw;
 
-
     .input-content {
         height: 100%;
         width: 100%;
@@ -11,6 +10,7 @@
         flex-direction: column;
         align-items: center;
         transition: height ease 1s;
+        gap: 30px;
     }
 
     .lines {
@@ -59,7 +59,7 @@
 }
 
 .information-content-part {
-    min-height: 0vh;
+    height: 0vh;
     width: 0vw;
     background: $fundo;
     box-shadow: inset 0px 10px 10px 0px #00000033;
@@ -72,6 +72,8 @@
         width: 100%;
         padding-top: 50px;
         padding-bottom: 50px;
+
+        animation: aparece linear 7s;
 
         .palette {
             @extend %central;
@@ -167,5 +169,18 @@
         }
 
 
+    }
+}
+
+
+@keyframes aparece {
+
+    0%,
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

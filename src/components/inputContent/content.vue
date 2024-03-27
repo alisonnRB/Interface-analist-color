@@ -15,8 +15,6 @@
 import line from '../icons/lines.png';
 import CustomInput from './child/customInput.vue';
 
-import color from '../../assets/js/global';
-
 export default {
     name: 'inputView',
     components: {
@@ -34,7 +32,11 @@ export default {
         modeTurn(turn) {
             if (turn) {
                 this.mode = true;
-                this.$emit('modeON', true);
+
+                setTimeout(() => {
+                    this.$emit('modeON', true);
+                }, 1000)
+
             }
         }
     }

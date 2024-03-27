@@ -90,14 +90,12 @@ export default {
             const image = color.getFile();
 
             reader.onloadend = () => {
-                // Aqui você precisa definir o resultado do leitor para a variável correta
                 this.file = reader.result;
             };
 
             if (image) {
                 reader.readAsDataURL(image);
             } else {
-                // Defina o que fazer se não houver imagem
                 this.file = null;
             }
         }

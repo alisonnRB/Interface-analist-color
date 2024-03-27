@@ -54,6 +54,7 @@ body {
   flex-direction: column;
   align-items: center;
   transition: height ease 1s;
+  gap: 30px;
 }
 .input-content-part .lines {
   height: 35%;
@@ -92,7 +93,7 @@ body {
 }
 
 .information-content-part {
-  min-height: 0vh;
+  height: 0vh;
   width: 0vw;
   background: rgba(121, 121, 121, 0.2509803922);
   box-shadow: inset 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
@@ -104,6 +105,7 @@ body {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
+  animation: aparece linear 7s;
 }
 .information-content-part .input-content .palette {
   flex-direction: column;
@@ -176,6 +178,14 @@ body {
   box-shadow: -15px 15px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
+@keyframes aparece {
+  0%, 75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 input[type=file] {
   display: none;
 }
@@ -183,13 +193,14 @@ input[type=file] {
 .custom-input, .glass {
   cursor: pointer;
   height: 70px;
-  width: 55vw;
+  width: 40vw;
   display: flex;
   align-items: center;
   gap: 30px;
   padding: 5px 0px 5px 0px;
-  border-radius: 5px;
+  border-radius: 8px;
   z-index: 100;
+  margin-top: 80px;
 }
 .custom-input img, .glass img {
   height: 75%;
