@@ -38,6 +38,10 @@ class Color {
         this.search();
     }
 
+    getFile() {
+        return this.file;
+    }
+
     separator(object) {
         this.setPalette(object['palette-HEX']);
         this.setRepresentative(object['representative-HEX']);

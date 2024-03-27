@@ -17,6 +17,38 @@
                 </span>
             </template>
         </div>
+
+
+        <div class="content-infos">
+
+            <div class="especifc-colors">
+
+                <span class="box-especif">
+                    <div class="line"></div>
+                    <circle-color :color="predominace" />
+                    <p class="desc">COR PREDOMINANTE</p>
+                </span>
+
+                <span class="box-especif">
+                    <div class="line"></div>
+                    <circle-color :color="representative" />
+                    <p class="desc">COR REPRESENTATIVA</p>
+                </span>
+
+                <span class="box-especif">
+                    <div class="line"></div>
+                    <circle-color :color="distinct" />
+                    <p class="desc">COR MAIS DISTINTA</p>
+                </span>
+            </div>
+
+            <div class="image">
+                <img :src="file" @load="applyBoxShadow">
+                <div class="shadow"></div>
+                <div class="suport"></div>
+            </div>
+        </div>
+
     </div>
 </template>
 
@@ -24,12 +56,17 @@
 import circleColor from './child/circleColor.vue';
 import { EventBus } from "../../eventBus";
 import color from '@/assets/js/global';
+import { render } from 'vue';
 
 export default {
     name: "contentInfo",
     data() {
         return {
             palette: [],
+            representative: '',
+            predominace: '',
+            distinct: '',
+            file: null
         }
     },
     components: {
@@ -39,10 +76,32 @@ export default {
         EventBus.on("modifica-mudou", (novaModifica) => {
             if (novaModifica) {
                 this.palette = color.getPalette();
+                this.representative = color.getRepresentative();
+                this.predominace = color.getPredominance();
+                this.distinct = color.getDistinct();
+                this.readImage();
                 color.setModifica(false);
             }
         });
     },
+    methods: {
+        readImage() {
+            const reader = new FileReader();
+            const image = color.getFile();
+
+            reader.onloadend = () => {
+                // Aqui você precisa definir o resultado do leitor para a variável correta
+                this.file = reader.result;
+            };
+
+            if (image) {
+                reader.readAsDataURL(image);
+            } else {
+                // Defina o que fazer se não houver imagem
+                this.file = null;
+            }
+        }
+    }
 }
 
 </script>

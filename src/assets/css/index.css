@@ -5,7 +5,7 @@ body {
   width: 100vh;
 }
 
-.circleContent, .information-content-part .input-content .palette .content-color, .information-content-part .input-content .palette, .input-content-part .box .input-box {
+.circleContent, .information-content-part .input-content .content-infos .especifc-colors .box-especif, .information-content-part .input-content .content-infos .especifc-colors, .information-content-part .input-content .palette .content-color, .information-content-part .input-content .palette, .input-content-part .box .input-box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,28 +92,88 @@ body {
 }
 
 .information-content-part {
-  height: 0vh;
+  min-height: 0vh;
   width: 0vw;
-  background: #797979;
+  background: rgba(121, 121, 121, 0.2509803922);
   box-shadow: inset 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
   transition: width ease 1s;
 }
 .information-content-part .input-content {
   height: 100%;
   width: 100%;
   padding-top: 50px;
+  padding-bottom: 50px;
 }
 .information-content-part .input-content .palette {
   flex-direction: column;
   gap: 40px;
 }
 .information-content-part .input-content .palette h2 {
-  color: white;
+  color: #f1f1f1;
   font-family: "inter";
   font-size: 2em;
 }
 .information-content-part .input-content .palette .content-color {
   gap: 50px;
+}
+.information-content-part .input-content .content-infos {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.information-content-part .input-content .content-infos .especifc-colors {
+  flex-direction: column;
+  align-items: start;
+  gap: 30px;
+  width: min-content;
+  border-left: solid 3px #797979;
+  margin-left: 80px;
+}
+.information-content-part .input-content .content-infos .especifc-colors .box-especif .circleContent {
+  position: relative;
+  bottom: 20px;
+  margin-right: 10px;
+}
+.information-content-part .input-content .content-infos .especifc-colors .box-especif .line {
+  height: 3px;
+  width: 55px;
+  background: #797979;
+}
+.information-content-part .input-content .content-infos .especifc-colors .box-especif .desc {
+  white-space: nowrap;
+  color: #f1f1f1;
+  font-family: "inter";
+  font-size: 1.5em;
+}
+.information-content-part .input-content .content-infos .image {
+  margin-right: 30px;
+}
+.information-content-part .input-content .content-infos .image img {
+  display: block;
+  object-fit: cover;
+  height: 250px;
+  border: solid 6px #fff;
+  box-shadow: -15px 15px 20px 0 rgba(0, 0, 0, 0.2);
+}
+.information-content-part .input-content .content-infos .image .shadow {
+  height: 250px;
+  width: calc(100% - 12px);
+  position: relative;
+  bottom: 256px;
+  margin-bottom: -256px;
+  left: 6px;
+  box-shadow: inset -10px 10px 20px 0 rgba(0, 0, 0, 0.7176470588), inset 5px -5px 20px rgba(255, 255, 255, 0.5019607843);
+}
+.information-content-part .input-content .content-infos .image .suport {
+  height: 250px;
+  position: relative;
+  border: solid 6px #fff;
+  border-top: transparent;
+  border-right: transparent;
+  background: transparent;
+  left: 50%;
+  box-shadow: -15px 15px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 input[type=file] {

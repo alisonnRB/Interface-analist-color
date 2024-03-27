@@ -2,7 +2,7 @@
     <section :style="mode ? { 'height': '35vh' } : null" class="input-content-part">
         <inputView @modeON="modeTurn" />
     </section>
-    <section :style="mode ? { 'height': '65vh', 'width': '100vw' } : null" class="information-content-part">
+    <section :style="mode ? { 'min-height': '65vh', 'width': '100vw' } : null" class="information-content-part">
         <contentInfo />
     </section>
 </template>
