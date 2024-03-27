@@ -5,7 +5,7 @@
                 <h2>PALETA</h2>
             </span>
 
-            <template v-if="palette.length > 0">
+            <template v-if="palette.length > 0 && palette[0] !== 'n'">
                 <span class="content-color">
                     <circleColor v-for="(color, index) in palette" :key="index" :color="color" />
                 </span>
@@ -21,7 +21,7 @@
 
         <div class="content-infos">
 
-            <div class="especifc-colors">
+            <div class="especifc-colors" v-if="predominace[0] == '#' || representative[0] == '#' || distinct[0] == '#'">
 
                 <span class="box-especif" v-if="predominace[0] == '#'">
                     <div class="line"></div>
@@ -42,7 +42,7 @@
                 </span>
             </div>
 
-            <div class="image">
+            <div class="image" v-if="predominace[0] == '#' || representative[0] == '#' || distinct[0] == '#'">
                 <img :src="file" @load="applyBoxShadow">
                 <div class="shadow"></div>
                 <div class="suport"></div>
@@ -56,7 +56,6 @@
 import circleColor from './child/circleColor.vue';
 import { EventBus } from "../../eventBus";
 import color from '@/assets/js/global';
-import { render } from 'vue';
 
 export default {
     name: "contentInfo",
