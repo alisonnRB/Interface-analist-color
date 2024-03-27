@@ -129,8 +129,9 @@ body {
   align-items: start;
   gap: 30px;
   width: min-content;
-  border-left: solid 3px #797979;
+  border-left: solid 5px #fff;
   margin-left: 80px;
+  box-shadow: -15px 0px 10px -10px rgba(0, 0, 0, 0.2);
 }
 .information-content-part .input-content .content-infos .especifc-colors .box-especif .circleContent {
   position: relative;
@@ -140,7 +141,8 @@ body {
 .information-content-part .input-content .content-infos .especifc-colors .box-especif .line {
   height: 3px;
   width: 55px;
-  background: #797979;
+  background: #fff;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 .information-content-part .input-content .content-infos .especifc-colors .box-especif .desc {
   white-space: nowrap;

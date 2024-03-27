@@ -23,19 +23,19 @@
 
             <div class="especifc-colors">
 
-                <span class="box-especif">
+                <span class="box-especif" v-if="predominace[0] == '#'">
                     <div class="line"></div>
                     <circle-color :color="predominace" />
                     <p class="desc">COR PREDOMINANTE</p>
                 </span>
 
-                <span class="box-especif">
+                <span class="box-especif" v-if="representative[0] == '#'">
                     <div class="line"></div>
                     <circle-color :color="representative" />
                     <p class="desc">COR REPRESENTATIVA</p>
                 </span>
 
-                <span class="box-especif">
+                <span class="box-especif" v-if="distinct[0] == '#'">
                     <div class="line"></div>
                     <circle-color :color="distinct" />
                     <p class="desc">COR MAIS DISTINTA</p>
