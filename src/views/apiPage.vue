@@ -8,7 +8,7 @@
                 <h3>POST</h3>
             </span>
             <span class="request">
-                <p>https://coloranalist.onlinr/src/, {formdata(&#34;image&#34;)}</p>
+                <p>https://coloranalist.online/src/, {formdata(&#34;image&#34;)}</p>
             </span>
         </div>
 
