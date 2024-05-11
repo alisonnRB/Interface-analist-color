@@ -16,7 +16,7 @@ class Color {
             const formData = new FormData();
             formData.append('image', this.file);
 
-            const response = await axios.post('https://coloranalist.online/src/', formData, {
+            const response = await axios.post('https://coloranalist.online/api/analist', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
