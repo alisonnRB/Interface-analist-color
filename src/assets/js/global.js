@@ -22,10 +22,8 @@ class Color {
                 }
             });
 
-            console.log(response)
-
-            if (response.data.ok) {
-                this.separator(response.data.response);
+            if (response.status == 200) {
+                this.separator(response.data);
             } else {
                 console.log('Erro: ' + response.data);
             }
