@@ -22,6 +22,8 @@ class Color {
                 }
             });
 
+            console.log(response)
+
             if (response.data.ok) {
                 this.separator(response.data.response);
             } else {
